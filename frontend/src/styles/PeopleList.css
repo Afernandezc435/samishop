@@ -1,0 +1,51 @@
+
+.dropdown {
+  background: #fff;
+  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  height: 100%;
+}
+
+.custom-li {
+  padding: 13px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-li.active {
+  background-color: #d4edda;
+}
+
+.custom-li:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-li div p.name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.custom-li div .species {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 700px) {
+  .dropdown {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
