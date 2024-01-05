@@ -1,0 +1,32 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+:root {
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+html,
+body {
+  font-family: "SF Pro Display", sans-serif;
+  margin: 0;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

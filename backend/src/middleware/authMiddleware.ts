@@ -17,8 +17,7 @@ const authenticate = asyncHandler(
       let validationToken = await Token.findOne({jwt: token});
 
       if (!validationToken) {
-        await Token.create({jwt: token, attemps: 0, locked: false});
-        validationToken = await Token.findOne({jwt: token});
+        validationToken = await Token.create({jwt: token, attempts: 1, locked: false});
       }
 
       const addAttemp = () => {
@@ -47,10 +46,11 @@ const authenticate = asyncHandler(
         addAttemp();
         throw new AuthenticationError("User not found");
       }
-
-      req.user = user;
+      console.log('auth user: ', user)
+      req.body = user;
       next();
     } catch (e) {
+      console.log(e);
       throw new AuthenticationError("Invalid token");
     }
   }

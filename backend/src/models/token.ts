@@ -6,7 +6,6 @@ export interface IToken extends Document {
   jwt: string;
   attempts: number;
   locked: boolean;
-  comparePassword: (enteredPassword: string) => boolean;
 }
 
 const tokenSchema = new Schema<IToken>({

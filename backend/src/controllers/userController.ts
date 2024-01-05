@@ -2,7 +2,8 @@ import { Request, Response } from "express";
 import User from "../models/user";
 
 const getUser = async (req: Request, res: Response) => {
-  const userId = req.user?._id;
+  console.log('user: ', req.body)
+  const userId = req.body._id;
   const user = await User.findById(userId, "name email");
 
   if (!user) {
